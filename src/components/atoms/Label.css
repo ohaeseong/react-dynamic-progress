@@ -1,0 +1,12 @@
+.label-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.label {
+    position: absolute;
+    transition: left 1s ease-in-out;
+    font-size: 0.8rem;
+    color: #f9f9f9;
+    align-items: center;
+}
