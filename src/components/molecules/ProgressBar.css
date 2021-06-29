@@ -1,0 +1,20 @@
+.background { 
+    height: 15px;
+    position: relative;
+    background: #E5E7E9;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.background span {
+    display: block;
+    height: 100%;
+}
+
+.progress {
+    background-color: #706af3;
+}
+
+.progress-wrap {
+    transition: width 1s ease-in-out;
+}
