@@ -1,0 +1,37 @@
+.background { 
+    height: 5px;
+    position: relative;
+    background: #E5E7E9;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.background span {
+    display: block;
+    height: 100%;
+}
+
+.progress {
+    background-color: #706af3;
+    animation: widthAnimation 1s ease-in-out;
+    animation-fill-mode:both;
+}
+
+.progress-wrap {
+    transition: width 1s ease-in-out;
+}
+
+.label-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.label {
+    position: absolute;
+    transition: left 1s ease-in-out;
+}
+
+@keyframes widthAnimation {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
