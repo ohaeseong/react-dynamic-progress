@@ -32,3 +32,8 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+src
+.babelrc
+webpack.config.js
+public
