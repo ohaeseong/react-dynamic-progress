@@ -20,17 +20,28 @@ const Label = ({
     height,
     completed,
 }: Props) => {
+    let left = `calc((${value}%) - ${value === 0 ? '-3px' : value < 10 ? '5px' : '35px'})`;
+    if (labelAlignment && !labelColor) {
+        labelColor = "#707070";
+    }
 
+    if (labelAlignment === "top") {
+        left = `calc((${value}%) - ${value < 10 ? '-3px' : value === 100 ? '35px' : '25px'})`;
+    }
 
-
+    if (labelAlignment === "bottom") {
+        left = `calc((${value}%) - ${value < 10 ? '5px' : value === 100 ? '35px' :  '25px'})`;
+    }
+    
     return (
         <span 
             className="label" 
             id="label" 
             style={{ 
-                left: `calc((${value}%) - 35px)`,
-                height: `${height}`, 
-                display: 'flex', 
+                left: left,
+                height: `${height}`,
+                display: 'flex',
+                bottom: `${labelAlignment === "top" ? '13px' : ''}`,
                 fontSize: `${labelSize}`, 
                 transition: `left ${transitionDuration} ease-in-out`,
                 color: `${labelColor}` 

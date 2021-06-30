@@ -1,8 +1,9 @@
 {
-  "name": "react-dynamic-progress",
+  "name": "@ohaeseong/react-progress-bar",
   "version": "1.0.0",
+  "module": "dist/bundle.min.js",
   "main": "index.js",
-  "repository": "https://github.com/ohaeseong/react-dynamic-progress.git",
+  "repository": "https://github.com/ohaeseong/react-progress-bar.git",
   "author": "ohaeseong <74897099+ohaeseong@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {

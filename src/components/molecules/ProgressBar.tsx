@@ -57,26 +57,45 @@ const ProgressBar = ({
     }, [value]);
 
     return (
-        <div style={{ margin: `${margin}` }}>
+        <div style={{ margin: `${margin}`, position: 'relative' }}>
+            {
+                labelAlignment === "top" ? 
+                    <Label 
+                        completed={completed} 
+                        value={value}
+                        labelSize={labelSize}
+                        labelColor={labelColor}
+                        transitionDuration={transitionDuration}
+                        labelAlignment={labelAlignment}
+                    />  : <></>
+            }
             <div className="background" style={{ width: `${width}`, height: `${height}`, background: `${bgColor}`, borderRadius: `${borderRadius}` }}>
                 <span className="progress-wrap" id="progress-wrap" style={{ width: `${value}%`, transition: `width ${transitionDuration} ${transitionTimingFunction}` }}>
                     <span className="progress" style={{ backgroundColor: `${progressColor}` }}>
                         {
-                            isLabelVisible ? <Label 
-                                                completed={completed} 
-                                                value={value} 
-                                                labelSize={labelSize}
-                                                labelColor={labelColor}
-                                                transitionDuration={transitionDuration}
-                                            /> 
-                                            : <></>
+                            isLabelVisible && !labelAlignment ? 
+                                <Label 
+                                    completed={completed} 
+                                    value={value} 
+                                    labelSize={labelSize}
+                                    labelColor={labelColor}
+                                    transitionDuration={transitionDuration}
+                                /> : <></>
                         }
                     </span>
                 </span>
             </div>
-            {/* <div className="label-wrap" style={{ width: `${width}` }}>
-                <span className="label" id="label" style={{ left: `calc(${value}% - 10px)` }}>{completed}%</span>
-            </div> */}
+            {
+                labelAlignment === "bottom" ? 
+                    <Label 
+                        completed={completed} 
+                        value={value}
+                        labelSize={labelSize}
+                        labelColor={labelColor}
+                        transitionDuration={transitionDuration}
+                        labelAlignment={labelAlignment}
+                    />  : <></>
+            }
         </div>
     );
 }
