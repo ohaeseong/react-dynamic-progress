@@ -34,8 +34,8 @@ function App() {
 | labelSize | string (1rem, 12px ...) |  0.8rem  | Default |
 | isLabelVisible | boolean (true === show labe, false === hide labe) |  false  | Default |
 | transitionDuration | string (1s, 0.5s ...) |  1s  | Default ||    progressColor   |.    |.    | Default |
-| transitionTimingFunction |string (ease, ease-in, ease-in-out ...) |.    | Default |
-| labelAlignment | string (top, bottom, null === center) |.    | Default |
+| transitionTimingFunction |string (ease, ease-in, ease-in-out ...) |  ease-in-out  | Default |
+| labelAlignment | string (top, bottom, null === center) |  null (center)  | Default |
 
 
 
