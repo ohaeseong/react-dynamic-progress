@@ -2,12 +2,12 @@
 
 react progress bar
 
-# Install 
+## Install 
 ```
   yarn add @ohaeseong/react-progress-bar
 ```
 
-# Usage
+## Usage
 
 ```
 import React from 'react';
@@ -20,7 +20,7 @@ function App() {
 
 ```
 
-# Props
+## Props
 | Name | Type | Default | Description |
 | ------ | --- | --- | ------- |
 | value (required)|  number(0 - 100)    |.    |    Percentage of completed progress bar value.     |
