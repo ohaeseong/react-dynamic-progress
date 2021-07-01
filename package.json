@@ -1,13 +1,18 @@
 {
   "name": "@ohaeseong/react-progress-bar",
-  "version": "1.1.19",
+  "version": "1.1.2",
   "module": "dist/index.js",
   "main": "dist/index.js",
   "repository": "https://github.com/ohaeseong/react-progress-bar.git",
   "author": "ohaeseong <74897099+ohaeseong@users.noreply.github.com>",
   "license": "MIT",
   "description": "react simple progress bar",
-  "keywords": ["react", "progress bar", "react progress bar", "animation"],
+  "keywords": [
+    "react",
+    "progress bar",
+    "react progress bar",
+    "animation"
+  ],
   "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public"
@@ -15,9 +20,12 @@
   "scripts": {
     "start": "webpack serve --mode development --open --hot",
     "build": "rollup -c",
+    "build:webpack": "webpack",
     "publish:npm": "rm -rf ./dist && tsc"
   },
   "peerDependencies": {
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.8",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
