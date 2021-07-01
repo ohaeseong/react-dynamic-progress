@@ -23,17 +23,17 @@ function App() {
 # Props
 | Name | Type | Default | Description |
 | ------ | --- | --- | ------- |
-| value (required)|  number( 0 - 100)    |.    |         |
-| width | string |.    | Default |
-| height | string |.    | Default |
-| margin | string |.    | Default |
-| bgColor | string (color code) |.    | Default |
-| progressColor | string (color code) |.    | Default |
-| borderRadius | string |.    | Default |
-| labelColor |  string (color code) |.    | Default |
-| labelSize | string (1rem, 12px ...) |.    | Default |
-| isLabelVisible | boolean (true === show labe, false === hide labe) |.    | Default |
-| transitionDuration | string (1s, 0.5s ...) |.    | Default ||    progressColor   |.    |.    | Default |
+| value (required)|  number(0 - 100)    |.    |         |
+| width | string |  auto  | Default |
+| height | string |  15px  | Default |
+| margin | string |  none  | Default |
+| bgColor | string (color code) |  #E5E7E9  | Default |
+| progressColor | string (color code) |  #706af3  | Default |
+| borderRadius | string |  3px  | Default |
+| labelColor |  string (color code) |  #f9f9f9  | Default |
+| labelSize | string (1rem, 12px ...) |  0.8rem  | Default |
+| isLabelVisible | boolean (true === show labe, false === hide labe) |  false  | Default |
+| transitionDuration | string (1s, 0.5s ...) |  1s  | Default ||    progressColor   |.    |.    | Default |
 | transitionTimingFunction |string (ease, ease-in, ease-in-out ...) |.    | Default |
 | labelAlignment | string (top, bottom, null === center) |.    | Default |
 
