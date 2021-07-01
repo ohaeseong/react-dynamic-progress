@@ -32,7 +32,7 @@ function App() {
 | borderRadius | string |  3px  | Border radius of the bar |
 | labelColor |  string (color code) |  #f9f9f9  | Label color of the bar |
 | labelSize | string (1rem, 12px ...) |  0.8rem  | Label size of the bar |
-| isLabelVisible | boolean (true === show labe, false === hide labe) |  false  | Visibility of the label |
+| isLabelVisible | boolean (true === show label, false === hide label) |  false  | Visibility of the label |
 | transitionDuration | string (1s, 0.5s ...) |  1s  | Duration of the width transition |
 | transitionTimingFunction |string (ease, ease-in, ease-in-out ...) |  ease-in-out  | Timing function of the width transition |
 | labelAlignment | string (top, bottom, null === center) |  null (center)  | Position of the label |
