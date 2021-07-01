@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Label from '../atoms/Label';
-import './ProgressBar.css';
 
 type Props = {
     value: number;
@@ -16,7 +15,7 @@ type Props = {
     transitionDuration?: string;
     transitionTimingFunction?: string;
     labelAlignment?: string;
-}
+};
 
 const ProgressBar = ({ 
         value, 
@@ -39,27 +38,50 @@ const ProgressBar = ({
     useEffect(() => {
         const labelElement = document.getElementById("label");
         const progressElement = document.getElementById("progress-wrap");
-        setCompleted(value);
 
-        if (!value) {
+        if (!value && labelElement && progressElement) {
             progressElement.style.width = "0%";
             labelElement.style.left = "0%";
             setCompleted(0);
             return;
         }
         
-        if (value > 100) {
+        if (value > 100 && progressElement && labelElement) {
             progressElement.style.width = "100%";
             labelElement.style.left = "100%";
             setCompleted(100);
             return;
         }
+
+        setCompleted(value);
     }, [value]);
+
+    const bagroundStyle = {
+        height: height || '15px',
+        width: `${width}`,
+        position: 'relative' as 'relative',
+        background: bgColor || '#E5E7E9',
+        overflow: 'hidden',
+        borderRadius: borderRadius || '3px'
+    };
+
+    const progressWrapStyle = {
+        width: `${value}%`,
+        transition: `width ${transitionDuration || '1s'} ${transitionTimingFunction}`,
+        display: 'block',
+        height: '100%'
+    };
+
+    const progressStyle = {
+        backgroundColor: progressColor || '#706af3',
+        display: 'block',
+        height: '100%'
+    };
 
     return (
         <div style={{ margin: `${margin}`, position: 'relative' }}>
             {
-                labelAlignment === "top" ? 
+                isLabelVisible && labelAlignment === "top" ? 
                     <Label 
                         completed={completed} 
                         value={value}
@@ -69,9 +91,9 @@ const ProgressBar = ({
                         labelAlignment={labelAlignment}
                     />  : <></>
             }
-            <div className="background" style={{ width: `${width}`, height: `${height}`, background: `${bgColor}`, borderRadius: `${borderRadius}` }}>
-                <span className="progress-wrap" id="progress-wrap" style={{ width: `${value}%`, transition: `width ${transitionDuration} ${transitionTimingFunction}` }}>
-                    <span className="progress" style={{ backgroundColor: `${progressColor}` }}>
+            <div style={{ ...bagroundStyle }}>
+                <span id="progress-wrap" className="progress-wrap" style={{ ...progressWrapStyle }}>
+                    <span style={{...progressStyle }}>
                         {
                             isLabelVisible && !labelAlignment ? 
                                 <Label 
@@ -86,7 +108,7 @@ const ProgressBar = ({
                 </span>
             </div>
             {
-                labelAlignment === "bottom" ? 
+                isLabelVisible && labelAlignment === "bottom" ? 
                     <Label 
                         completed={completed} 
                         value={value}
@@ -99,4 +121,5 @@ const ProgressBar = ({
         </div>
     );
 }
+
 export default ProgressBar;

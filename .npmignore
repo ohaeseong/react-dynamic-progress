@@ -1,6 +1,5 @@
 # npm
 node_modules/
-dist/
 
 # dev
 src
@@ -9,7 +8,7 @@ rollup.config.js
 tsconfig.json
 webpack.config.js
 .babelrc
+public
 yarn-error.log
-
 # GIT
 .git
