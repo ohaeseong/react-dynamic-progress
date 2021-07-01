@@ -23,19 +23,19 @@ function App() {
 # Props
 | Name | Type | Default | Description |
 | ------ | --- | --- | ------- |
-| value (required)|  number(0 - 100)    |.    |         |
-| width | string |  auto  | Default |
-| height | string |  15px  | Default |
-| margin | string |  none  | Default |
-| bgColor | string (color code) |  #E5E7E9  | Default |
-| progressColor | string (color code) |  #706af3  | Default |
-| borderRadius | string |  3px  | Default |
-| labelColor |  string (color code) |  #f9f9f9  | Default |
-| labelSize | string (1rem, 12px ...) |  0.8rem  | Default |
-| isLabelVisible | boolean (true === show labe, false === hide labe) |  false  | Default |
-| transitionDuration | string (1s, 0.5s ...) |  1s  | Default ||    progressColor   |.    |.    | Default |
-| transitionTimingFunction |string (ease, ease-in, ease-in-out ...) |  ease-in-out  | Default |
-| labelAlignment | string (top, bottom, null === center) |  null (center)  | Default |
+| value (required)|  number(0 - 100)    |.    |    Percentage of completed progress bar value.     |
+| width | string |  auto  | 	Width of the bar |
+| height | string |  15px  | Height of the bar |
+| margin | string |  none  | Margin of the bar |
+| bgColor | string (color code) |  #E5E7E9  | 	Color of the "non-completed" bar |
+| progressColor | string (color code) |  #706af3  | Color of the completed bar |
+| borderRadius | string |  3px  | Border radius of the bar |
+| labelColor |  string (color code) |  #f9f9f9  | Label color of the bar |
+| labelSize | string (1rem, 12px ...) |  0.8rem  | Label size of the bar |
+| isLabelVisible | boolean (true === show labe, false === hide labe) |  false  | Visibility of the label |
+| transitionDuration | string (1s, 0.5s ...) |  1s  | Duration of the width transition |
+| transitionTimingFunction |string (ease, ease-in, ease-in-out ...) |  ease-in-out  | Timing function of the width transition |
+| labelAlignment | string (top, bottom, null === center) |  null (center)  | Position of the label |
 
 
 
