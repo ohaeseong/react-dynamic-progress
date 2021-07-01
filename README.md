@@ -27,11 +27,11 @@ function App() {
 | width | string |.    | Default |
 | height | string |.    | Default |
 | margin | string |.    | Default |
-| bgColor | string |.    | Default |
-| progressColor | string |.    | Default |
+| bgColor | string (color code) |.    | Default |
+| progressColor | string (color code) |.    | Default |
 | borderRadius | string |.    | Default |
-| labelColor |  string |.    | Default |
-| labelSize | string |.    | Default |
+| labelColor |  string (color code) |.    | Default |
+| labelSize | string (1rem, 12px ...) |.    | Default |
 | isLabelVisible | boolean (true === show labe, false === hide labe) |.    | Default |
 | transitionDuration | string (1s, 0.5s ...) |.    | Default ||    progressColor   |.    |.    | Default |
 | transitionTimingFunction |string (ease, ease-in, ease-in-out ...) |.    | Default |
