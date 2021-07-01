@@ -3,7 +3,6 @@ node_modules/
 dist/
 
 # dev
-src
 .gitignore
 rollup.config.js
 tsconfig.json

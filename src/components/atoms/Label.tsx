@@ -29,7 +29,7 @@ const Label = ({
     }
 
     if (labelAlignment === "bottom") {
-        left = `calc((${value}%) - ${value < 10 ? '5px' : value === 100 ? '35px' :  '25px'})`;
+        left = `calc((${value}%) - ${value < 10 ? '0px' : value === 100 ? '35px' :  '25px'})`;
     }
     
     const labelStyle = {
