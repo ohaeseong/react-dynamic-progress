@@ -22,10 +22,10 @@ module: { // webpack에서 loader를 사용할 때에는 아래와 같이 사용
                 target: 'es2015'
             }
         },
-        {
-            test:/\.css$/,
-            use:['style-loader','css-loader'],
-        },
+        // {
+        //     test:/\.css$/,
+        //     use:['style-loader','css-loader'],
+        // },
     ]
 },
   plugins: [

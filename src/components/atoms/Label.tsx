@@ -1,5 +1,4 @@
 import React from 'react';
-import './Label.css';
 
 type Props = {
     labelColor?: string;
@@ -8,7 +7,7 @@ type Props = {
     value: number;
     height?: string;
     completed: number;
-    transitionDuration: string;
+    transitionDuration?: string;
 };
 
 const Label = ({
@@ -33,19 +32,22 @@ const Label = ({
         left = `calc((${value}%) - ${value < 10 ? '5px' : value === 100 ? '35px' :  '25px'})`;
     }
     
+    const labelStyle = {
+        display: 'flex',
+        position: 'absolute' as 'absolute',
+        left: left,
+        height: `${height}`,
+        transition: `left ${transitionDuration || "1s"} ease-in-out`,
+        fontSize: `${labelSize || "0.8rem"}`, 
+        color: `${labelColor || '#f9f9f9'}`,
+        bottom: `${labelAlignment === 'top' ? '13px' : ''}`,
+        alignItems: 'center'
+    };
+    
     return (
         <span 
-            className="label" 
             id="label" 
-            style={{ 
-                left: left,
-                height: `${height}`,
-                display: 'flex',
-                bottom: `${labelAlignment === "top" ? '13px' : ''}`,
-                fontSize: `${labelSize}`, 
-                transition: `left ${transitionDuration} ease-in-out`,
-                color: `${labelColor}` 
-            }}>
+            style={{...labelStyle}}>
             {completed}%
         </span>
     );
