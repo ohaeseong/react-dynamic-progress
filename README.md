@@ -1,6 +1,6 @@
 ![](https://images.velog.io/images/alskt0419/post/7517c720-e26c-4b7c-82f0-c16fb1652ea2/progress_preview.gif)
 
-react progress bar
+https://www.npmjs.com/package/@ohaeseong/react-progress-bar
 
 ## Install 
 ```
