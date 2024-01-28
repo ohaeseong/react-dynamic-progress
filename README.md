@@ -37,7 +37,7 @@ function App() {
 | transitionTimingFunction |string (ease, ease-in, ease-in-out ...) |  ease-in-out  | Timing function of the width transition |
 | labelAlignment | string (top, bottom, null === center) |  null (center)  | Position of the label |
 
-
+This project needs update
 
 
 
