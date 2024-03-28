@@ -1,6 +1,6 @@
 {
   "name": "@ohaeseong/react-progress-bar",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "module": "dist/index.js",
   "main": "dist/index.js",
   "repository": "https://github.com/ohaeseong/react-progress-bar.git",
@@ -30,6 +30,10 @@
     "react-dom": "^16.0.0"
   },
   "dependencies": {
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.3",
+    "@babel/preset-env": "^7.24.3",
+    "@babel/preset-react": "^7.24.1",
     "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.8",
     "react": "^16.0.0",
