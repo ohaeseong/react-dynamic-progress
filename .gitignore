@@ -1,6 +1,7 @@
 # npm
 node_modules/
 dist/
+build/
 
 # dev
 .gitignore
@@ -9,6 +10,7 @@ tsconfig.json
 webpack.config.js
 .babelrc
 yarn-error.log
+
 
 # GIT
 .git

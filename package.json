@@ -1,8 +1,8 @@
 {
   "name": "@ohaeseong/react-progress-bar",
-  "version": "1.3.1",
-  "module": "dist/index.js",
-  "main": "dist/index.js",
+  "version": "1.3.2",
+  "module": "build/index.js",
+  "main": "build/index.js",
   "repository": "https://github.com/ohaeseong/react-progress-bar.git",
   "author": "ohaeseong <74897099+ohaeseong@users.noreply.github.com>",
   "license": "MIT",
@@ -13,12 +13,12 @@
     "react progress bar",
     "animation"
   ],
-  "types": "dist/index.d.ts",
+  "types": "build/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "build": "webpack",
+    "build": "rollup -c",
     "publish:npm": "npm publish"
   },
   "peerDependencies": {
@@ -31,13 +31,11 @@
     "@types/react": "^18.2.73",
     "@types/react-dom": "^18.2.22",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "webpack": "^5.91.0",
-    "webpack-cli": "^5.1.4"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "esbuild-loader": "^4.1.0",
-    "html-webpack-plugin": "^5.6.0",
+    "rollup": "^4.13.1",
+    "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^4.3.4"
   }
 }
