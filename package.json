@@ -1,6 +1,6 @@
 {
   "name": "@ohaeseong/react-progress-bar",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "module": "dist/index.js",
   "main": "dist/index.js",
   "repository": "https://github.com/ohaeseong/react-progress-bar.git",
@@ -30,14 +30,14 @@
     "react-dom": "^16.0.0"
   },
   "dependencies": {
-    "@babel/cli": "^7.24.1",
-    "@babel/core": "^7.24.3",
-    "@babel/preset-env": "^7.24.3",
-    "@babel/preset-react": "^7.24.1",
     "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.8",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4"
   },
   "devDependencies": {
     "esbuild-loader": "^4.1.0",
