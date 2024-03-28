@@ -10,6 +10,7 @@ https://www.npmjs.com/package/@ohaeseong/react-progress-bar
 ## Usage
 
 ```
+'use client' // If you want to use this package in Next.js, you have to configure it to render only on the client side.
 import React from 'react';
 import { ProgressBar } from '@ohaeseong/react-progress-bar';
 
