@@ -1,6 +1,6 @@
 {
   "name": "@ohaeseong/react-progress-bar",
-  "version": "1.1.2",
+  "version": "1.2.6",
   "module": "dist/index.js",
   "main": "dist/index.js",
   "repository": "https://github.com/ohaeseong/react-progress-bar.git",
@@ -21,7 +21,7 @@
     "start": "webpack serve --mode development --open --hot",
     "build": "rollup -c",
     "build:webpack": "webpack",
-    "publish:npm": "rm -rf ./dist && tsc"
+    "publish:npm": "npm publish"
   },
   "peerDependencies": {
     "@types/react": "^17.0.11",
@@ -32,25 +32,17 @@
   "dependencies": {
     "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.8",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.14.5",
-    "@babel/core": "^7.14.6",
-    "@babel/preset-env": "^7.14.7",
-    "@babel/preset-react": "^7.14.5",
-    "esbuild-loader": "^2.13.1",
-    "html-webpack-plugin": "^5.3.2",
-    "rollup": "^2.52.3",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-typescript2": "^0.30.0",
+    "esbuild-loader": "^4.1.0",
+    "html-webpack-plugin": "^5.6.0",
+    "rollup": "^4.13.1",
+    "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^4.3.4",
-    "webpack": "^5.41.1",
-    "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
   }
 }
