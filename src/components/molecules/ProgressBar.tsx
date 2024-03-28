@@ -6,12 +6,12 @@ type Props = {
     width?: string;
     height?: string;
     margin?: string;
-    bgColor?: string;
-    progressColor?: string;
+    color?: string;
+    trackColor?: string;
     borderRadius?: string;
     labelColor?: string;
     labelSize?: string;
-    isLabelVisible?: boolean;
+    labelVisible?: boolean;
     transitionDuration?: string;
     transitionTimingFunction?: string;
     labelAlignment?: string;
@@ -22,13 +22,13 @@ const ProgressBar = ({
         width, 
         height, 
         margin, 
-        bgColor, 
-        progressColor, 
+        color, 
+        trackColor, 
         borderRadius,
         labelAlignment,
         labelSize,
         labelColor,
-        isLabelVisible = true,
+        labelVisible = true,
         transitionDuration,
         transitionTimingFunction = "ease-in-out",
      }: Props) => {
@@ -60,7 +60,7 @@ const ProgressBar = ({
         height: height || '15px',
         width: `${width}`,
         position: 'relative' as 'relative',
-        background: bgColor || '#E5E7E9',
+        background: color || '#E5E7E9',
         overflow: 'hidden',
         borderRadius: borderRadius || '3px'
     };
@@ -73,7 +73,7 @@ const ProgressBar = ({
     };
 
     const progressStyle = {
-        backgroundColor: progressColor || '#706af3',
+        backgroundColor: trackColor || '#706af3',
         display: 'block',
         height: '100%'
     };
@@ -81,7 +81,7 @@ const ProgressBar = ({
     return (
         <div style={{ margin: `${margin}`, position: 'relative' }}>
             {
-                isLabelVisible && labelAlignment === "top" ? 
+                labelVisible && labelAlignment === "top" ? 
                     <Label 
                         completed={completed} 
                         value={value}
@@ -95,7 +95,7 @@ const ProgressBar = ({
                 <span id="progress-wrap" className="progress-wrap" style={{ ...progressWrapStyle }}>
                     <span style={{...progressStyle }}>
                         {
-                            isLabelVisible && !labelAlignment ? 
+                            labelVisible && !labelAlignment ? 
                                 <Label 
                                     completed={completed} 
                                     value={value} 
@@ -108,7 +108,7 @@ const ProgressBar = ({
                 </span>
             </div>
             {
-                isLabelVisible && labelAlignment === "bottom" ? 
+                labelVisible && labelAlignment === "bottom" ? 
                     <Label 
                         completed={completed} 
                         value={value}

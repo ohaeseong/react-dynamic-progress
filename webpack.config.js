@@ -1,9 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { ESBuildPlugin } = require('esbuild-loader');
 
 module.exports = {
-entry: './src/index.tsx',
+entry: {app: ['./src/index.ts']},
+mode: 'production',
 resolve: { // 인식 파일 형식 지정
     extensions: ['.ts', '.tsx', '.js']
 },
@@ -32,6 +32,5 @@ module: { // webpack에서 loader를 사용할 때에는 아래와 같이 사용
     new HtmlWebpackPlugin({ // html파일을 webpack이 빌드할 수 있도록 플러그인을 설정한다.
         template: './public/index.html'
     }),
-    new ESBuildPlugin()
 ]
 }
