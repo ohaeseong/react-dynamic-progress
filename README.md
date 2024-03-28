@@ -28,12 +28,12 @@ function App() {
 | width | string |  auto  | 	Width of the bar |
 | height | string |  15px  | Height of the bar |
 | margin | string |  none  | Margin of the bar |
-| bgColor | string (color code) |  #E5E7E9  | 	Color of the "non-completed" bar |
-| progressColor | string (color code) |  #706af3  | Color of the completed bar |
+| color | string (color code) |  #E5E7E9  | 	Color of the "non-completed" bar |
+| trackColor | string (color code) |  #706af3  | Color of the completed bar |
 | borderRadius | string |  3px  | Border radius of the bar |
 | labelColor |  string (color code) |  #f9f9f9  | Label color of the bar |
 | labelSize | string (1rem, 12px ...) |  0.8rem  | Label size of the bar |
-| isLabelVisible | boolean (true === show label, false === hide label) |  false  | Visibility of the label |
+| labelVisible | boolean (true === show label, false === hide label) |  false  | Visibility of the label |
 | transitionDuration | string (1s, 0.5s ...) |  1s  | Duration of the width transition |
 | transitionTimingFunction |string (ease, ease-in, ease-in-out ...) |  ease-in-out  | Timing function of the width transition |
 | labelAlignment | string (top, bottom, null === center) |  null (center)  | Position of the label |
