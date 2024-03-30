@@ -3,6 +3,7 @@ import Label from '../atoms/Label';
 
 type Props = {
     value: number;
+    max: number;
     width?: string;
     height?: string;
     margin?: string;
@@ -19,6 +20,7 @@ type Props = {
 
 const ProgressBar = ({ 
         value, 
+        max,
         width, 
         height, 
         margin, 
@@ -110,7 +112,7 @@ const ProgressBar = ({
             {
                 labelVisible && labelAlignment === "bottom" ? 
                     <Label 
-                        completed={completed} 
+                        completed={completed}
                         value={value}
                         labelSize={labelSize}
                         labelColor={labelColor}
